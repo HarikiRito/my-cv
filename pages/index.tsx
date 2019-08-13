@@ -1,24 +1,37 @@
 import React, {useEffect} from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
 import {Button} from '@material-ui/core'
 import {NextComponentType} from 'next'
-import {useTranslation, withTranslation} from 'react-i18next'
-import {useNextTranslation} from '@/i18n'
-import {theme} from '@/components/Theme/Theme'
+import {useTranslation} from 'react-i18next'
+import {getLanguage} from '@/utils/i18n'
 
 interface Props {
 
 }
 
 const Home: NextComponentType = (props) => {
+  const {t, i18n} = useTranslation('common')
+
+  const changeI18n = () => {
+
+  }
+  useEffect(() => {
+    console.log(t('a'))
+  })
+
+  const switchLanguage = () => {
+    if (getLanguage() === 'vi') {
+      i18n.changeLanguage('en')
+    } else {
+      i18n.changeLanguage('vi')
+    }
+  }
 
   return (
     <div>
-      <Button>xyz</Button>
+      <Button onClick = {switchLanguage}>Button {t('a')}</Button>
     </div>
   )
 
 }
 
-export default withTranslation('common')(Home)
+export default Home
