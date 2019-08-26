@@ -15,7 +15,7 @@ const Home: NextComponentType = (props) => {
 
   }
   useEffect(() => {
-    console.log(t('a'))
+    console.log(t('name'))
   })
 
   const switchLanguage = () => {
@@ -28,10 +28,14 @@ const Home: NextComponentType = (props) => {
 
   return (
     <div>
-      <Button onClick = {switchLanguage}>Button {t('a')}</Button>
+      <Button onClick = {switchLanguage}>Button {t('common:name')}</Button>
     </div>
   )
 
 }
+
+Home.getInitialProps = async () => ({
+  namespacesRequired: [],
+})
 
 export default Home
