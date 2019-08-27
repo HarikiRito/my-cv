@@ -15,7 +15,8 @@ import {
 import classNames from 'classnames'
 import {useTranslation} from 'react-i18next'
 import {grey} from '@material-ui/core/colors'
-import {AccountCircle} from '@material-ui/icons'
+import {AccountCircle, VerifiedUser, Work, Email} from '@material-ui/icons'
+import {Facebook, Linkedin, Skype} from 'mdi-material-ui'
 
 interface MatProfileProps {
 
@@ -38,6 +39,9 @@ const useStyles = makeStyles((theme: Theme) =>
       height: 'auto',
       clipPath: 'polygon(0 10%, 100% 0%, 100% 90%, 0% 100%)',
     },
+    labelProfile: {
+      paddingTop: 4,
+    },
   }),
 )
 
@@ -45,43 +49,43 @@ const profileInfos = [{
   key: 'common:name',
   value: 'profile:name',
   labelProps: {
-    StepIconComponent: () => <AccountCircle />,
+    StepIconComponent: () => <AccountCircle color = 'primary' />,
   },
 }, {
   key: 'common:birth_day',
   value: 'profile:birth_day',
   labelProps: {
-    StepIconComponent: undefined,
+    StepIconComponent: () => <VerifiedUser color = 'primary' />,
   },
 }, {
   key: 'common:job',
   value: 'profile:job',
   labelProps: {
-    StepIconComponent: undefined,
+    StepIconComponent: () => <Work color = 'primary' />,
   },
 }, {
   key: 'common:email',
   value: 'profile:email',
   labelProps: {
-    StepIconComponent: undefined,
+    StepIconComponent: () => <Email color = 'primary' />,
   },
 }, {
   key: 'common:skype',
   value: 'profile:skype',
   labelProps: {
-    StepIconComponent: undefined,
+    StepIconComponent: () => <Skype color = 'primary' />,
   },
 }, {
   key: 'common:linkedin',
   value: 'profile:linkedin',
   labelProps: {
-    StepIconComponent: undefined,
+    StepIconComponent: () => <Linkedin color = 'primary' />,
   },
 }, {
   key: 'common:facebook',
   value: 'profile:facebook',
   labelProps: {
-    StepIconComponent: undefined,
+    StepIconComponent: () => <Facebook color = 'primary' />,
   },
 }]
 
@@ -106,10 +110,11 @@ const MatProfile: ComponentType<MatProfileProps> = (props) => {
           <Stepper activeStep = {-1} orientation = 'vertical'>
             {profileInfos.map(v => (
               <Step key = {v.key}>
-                <StepLabel {...v.labelProps}>{t(v.key)}: {t(v.value)}</StepLabel>
+                <StepLabel {...v.labelProps} classes = {{
+                  label: classes.labelProfile,
+                }}>{t(v.key)}: {t(v.value)}</StepLabel>
               </Step>
             ))}
-
           </Stepper>
         </Box>
       </Paper>
