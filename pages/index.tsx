@@ -1,41 +1,35 @@
-import React, {useEffect} from 'react'
-import {Button} from '@material-ui/core'
+import React, {useEffect, Fragment} from 'react'
+import {Button, makeStyles, createStyles, Theme, Grid} from '@material-ui/core'
 import {NextComponentType} from 'next'
 import {useTranslation} from 'react-i18next'
 import {getLanguage} from '@/utils/i18n'
+import {useLanguage} from '@/hooks/utils'
+import GridContainer from '@/components/GridContainer'
+import MatProfile from '@/layouts/Mat/MatProfile'
 
 interface Props {
 
 }
 
 const Home: NextComponentType = (props) => {
-  const {t, i18n} = useTranslation('common')
-
-  const changeI18n = () => {
-
-  }
-  useEffect(() => {
-    console.log(t('name'))
-  })
-
-  const switchLanguage = () => {
-    if (getLanguage() === 'vi') {
-      i18n.changeLanguage('en')
-    } else {
-      i18n.changeLanguage('vi')
-    }
-  }
+  const {t} = useTranslation(['common'])
 
   return (
-    <div>
-      <Button onClick = {switchLanguage}>Button {t('common:name')}</Button>
-    </div>
+    <Fragment>
+      <GridContainer xs = {10}>
+        <Grid container item md = {12} spacing = {5}>
+          <Grid item md = {3}>
+            <MatProfile />
+          </Grid>
+        </Grid>
+      </GridContainer>
+    </Fragment>
   )
 
 }
 
 Home.getInitialProps = async () => ({
-  namespacesRequired: [],
+  namespacesRequired: ['common'],
 })
 
 export default Home

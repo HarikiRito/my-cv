@@ -1,31 +1,20 @@
-import {ThemeOptions} from '@material-ui/core/es/styles/createMuiTheme'
 import {createMuiTheme} from '@material-ui/core/styles'
-import {PaletteOptions} from '@material-ui/core/styles/createPalette'
-import {FontStyleOptions, TypographyOptions} from '@material-ui/core/styles/createTypography'
-import Red from '@material-ui/core/colors/red'
-import Gray from '@material-ui/core/colors/grey'
+import red from '@material-ui/core/colors/red'
 
-interface PaletteExtra extends PaletteOptions {
-
-}
-
-export interface ThemeCustom extends ThemeOptions {
-  palette?: PaletteExtra;
-  typography?: TypographyOptions | FontStyleOptions
-}
-
-const options: ThemeCustom = {
+// Create a theme instance.
+export const theme = createMuiTheme({
   palette: {
     primary: {
-      main: Gray[100],
+      main: '#556cd6',
     },
     secondary: {
-      main: Gray[900],
+      main: '#19857b',
     },
     error: {
-      main: Red[600],
+      main: red.A400,
+    },
+    background: {
+      default: '#fff',
     },
   },
-};
-
-export const theme = createMuiTheme(options);
+})
