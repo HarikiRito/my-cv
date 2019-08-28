@@ -7,6 +7,7 @@ import {useLanguage} from '@/hooks/utils'
 import GridContainer from '@/components/GridContainer'
 import MatProfile from '@/layouts/Mat/MatProfile'
 import {grey} from '@material-ui/core/colors'
+import MatNav from '@/layouts/Mat/MatNav'
 
 interface Props {
 
@@ -32,6 +33,9 @@ const Home: NextComponentType = (props) => {
             <Grid container item md = {12} spacing = {5}>
               <Grid item md = {3}>
                 <MatProfile />
+              </Grid>
+              <Grid item md = {9}>
+                <MatNav />
               </Grid>
             </Grid>
           </Box>
