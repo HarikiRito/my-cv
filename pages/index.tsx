@@ -30,7 +30,7 @@ const Home: NextComponentType = (props) => {
       <div className = {classes.root}>
         <GridContainer xs = {10}>
           <Box mt = {6}>
-            <Grid container item md = {12} spacing = {5}>
+            <Grid container item md = {12} spacing = {4}>
               <Grid item md = {3}>
                 <MatProfile />
               </Grid>
