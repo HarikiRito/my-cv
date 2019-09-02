@@ -1,6 +1,8 @@
 import React, {ChangeEvent, ComponentType, Fragment, useState} from 'react'
 import {compose} from 'recompose'
 import {makeStyles, Theme, createStyles, AppBar, Tabs, Tab, Box, Typography, Paper} from '@material-ui/core'
+import MatTabAboutMe from '@/layouts/Mat/TabItems/MatTabAboutMe'
+import MatTabResume from '@/layouts/Mat/TabItems/MatTabResume'
 
 interface MatNavProps {
 
@@ -38,10 +40,10 @@ const MatNav: ComponentType<MatNavProps> = (props) => {
         <Paper>
           <Box p = {3} pt = {4}>
             {tabIndex === 0 &&
-             <div>0</div>
+             <MatTabAboutMe />
             }
             {tabIndex === 1 &&
-             <div>1</div>
+             <MatTabResume />
             }
             {tabIndex === 2 &&
              <div>2</div>
