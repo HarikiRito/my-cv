@@ -31,8 +31,8 @@ const MatNav: ComponentType<MatNavProps> = (props) => {
         <Tabs value = {tabIndex} onChange = {handleTabChange} aria-label = 'simple tabs example'
               indicatorColor = 'primary'
         >
-          <Tab label = 'Item One' />
-          <Tab label = 'Item Two' />
+          <Tab href = '#home' label = 'Item One' />
+          <Tab href = '#resume' label = 'Item Two' />
           <Tab label = 'Item Three' />
         </Tabs>
       </AppBar>

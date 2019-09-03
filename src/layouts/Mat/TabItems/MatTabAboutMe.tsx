@@ -61,7 +61,7 @@ const techs = [{
 
 const MatTabAboutMe: ComponentType<MatTabAboutMeProps> = (props) => {
   const classes = useStyles(props)
-  const {t}     = useTranslation(['common','profile'])
+  const {t}     = useTranslation(['common', 'profile'])
 
   return (
     <Fragment>
@@ -84,7 +84,7 @@ const MatTabAboutMe: ComponentType<MatTabAboutMeProps> = (props) => {
             </HeadingTypography>
           </Grid>
           {programmingLanguages.map(v => (
-            <Grid item md = {12}>
+            <Grid item md = {12} key = {v.key}>
               <SkillIndicator score = {v.value} name = {v.key} />
             </Grid>
           ))}
@@ -96,7 +96,7 @@ const MatTabAboutMe: ComponentType<MatTabAboutMeProps> = (props) => {
             </HeadingTypography>
           </Grid>
           {techs.map(v => (
-            <Grid item md = {12}>
+            <Grid item md = {12} key = {v.key}>
               <SkillIndicator score = {v.value} name = {v.key} />
             </Grid>
           ))}
