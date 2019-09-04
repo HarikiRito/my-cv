@@ -10,5 +10,13 @@ let config = {
 };
 
 module.exports = withPlugins([
-  [withSass, {cssModules: true}],
+  [
+    withSass, {
+    cssModules: true,
+    cssLoaderOptions: {
+      importLoaders: 1,
+      localIdentName: '[local]__[hash:base64:5]',
+    },
+  },
+  ],
 ], config);
