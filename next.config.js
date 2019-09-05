@@ -2,6 +2,8 @@ const path        = require('path');
 const withPlugins = require('next-compose-plugins');
 const withSass    = require('@zeit/next-sass');
 
+const isProd = process.env.NODE_ENV === 'production';
+
 let config = {
   webpack(config, options) {
     config.resolve.alias['@'] = path.join(__dirname, 'src');
