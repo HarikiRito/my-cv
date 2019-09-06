@@ -29,14 +29,8 @@ $line: 4px;
   text-align: left;
   font-weight: 100;
 
-  h1, h2, h3 {
-    letter-spacing: 1.5px;
-    font-weight: 100;
-    font-size: 1.4em;
-  }
-
   .event {
-    border-bottom: 1px dashed fade($color-light, 10%);
+    border-bottom: 1px dashed $color-light;
     padding-bottom: ($spacing * 0.5);
     margin-bottom: $spacing;
     position: relative;
@@ -55,7 +49,7 @@ $line: 4px;
 
     &:before {
       left: ((($date * 0.6) + $spacing + $line + $dot + ($dotborder * 2)) * 1.5) * -1;
-      color: fade($color-light, 40%);
+      color: $color-light;
       content: attr(data-date);
       text-align: right;
       font-weight: 100;
@@ -66,7 +60,7 @@ $line: 4px;
     &:after {
       box-shadow: 0 0 0 $dotborder fade($color-primary,100%);
       left: ($spacing + $line + ($dot * 0.35)) * -1;
-      background: lighten($background,5%);
+      background: $background;
       border-radius: 50%;
       height: $dot;
       width: $dot;

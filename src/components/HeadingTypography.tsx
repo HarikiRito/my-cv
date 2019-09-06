@@ -13,9 +13,10 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'inline-block',
       position: 'relative',
       '&::after': {
-        width: '100%',
-        transform: 'translateX(-100%)',
-        bottom: 3,
+        width: 'calc(100% + 6px)',
+        transform: 'translateX(calc(-100% + 3px))',
+        opacity: .6,
+        bottom: 4,
         position: 'absolute',
         content: '\'\'',
         borderBottom: `8px solid ${fade(theme.palette.primary.main, .6)}`,

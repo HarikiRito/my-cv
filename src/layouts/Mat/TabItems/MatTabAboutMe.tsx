@@ -18,7 +18,7 @@ const programmingLanguages = [{
   value: 95,
 }, {
   key: 'Javascript',
-  value: 80,
+  value: 90,
 }, {
   key: 'PHP',
   value: 75,
@@ -30,7 +30,7 @@ const programmingLanguages = [{
   value: 75,
 }, {
   key: 'Java',
-  value: 40,
+  value: 55,
 }, {
   key: 'Dart',
   value: 40,

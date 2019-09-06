@@ -1,5 +1,5 @@
 import React from 'react'
-import App, {Container} from 'next/app'
+import App, {Container, AppProps} from 'next/app'
 import Head from 'next/head'
 import {ThemeProvider} from '@material-ui/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -13,6 +13,13 @@ class MyApp extends App {
     const jssStyles = document.querySelector('#jss-server-side')
     if (jssStyles) {
       // jssStyles.parentNode.removeChild(jssStyles)
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState): void {
+    const jssStyles = document.querySelector('#jss-server-side')
+    if (jssStyles) {
+      jssStyles.parentNode.removeChild(jssStyles)
     }
   }
 
