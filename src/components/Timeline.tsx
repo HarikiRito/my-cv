@@ -4,18 +4,20 @@ import {makeStyles, Theme, createStyles, Typography, Box} from '@material-ui/cor
 import timelineCss from '@/styles/timeline.scss'
 import {CSSProperties} from '@material-ui/styles'
 import {grey} from '@material-ui/core/colors'
-import {Moment} from 'moment'
+import {Moment, MomentInput} from 'moment'
 import {useTranslation} from 'react-i18next'
+import moment from 'moment'
 
 interface TimelineProps {
-  items: TimelineItems[]
+  items: TimelineItem[]
 }
 
-export interface TimelineItems {
+export interface TimelineItem {
+  index?: number
   title: string
   caption?: string
-  start?: Moment
-  end?: Moment
+  start?: MomentInput
+  end?: MomentInput
   body?: string
   company?: string
 }
@@ -85,18 +87,21 @@ const Timeline: ComponentType<TimelineProps> = (props) => {
     <Fragment>
       <ul className = {classes.timeline}>
         {items.map(item => (
-          <li className = {classes.event} key = {item.title}>
+          <li className = {classes.event} key = {item.index}>
             <h3 className = {classes.h3}>{t(item.title)}</h3>
             {item.company && (
               <Typography component = 'p' variant = 'caption'>
-                {item.company}
+                {t(item.company)}
               </Typography>
             )}
             {(item.start || item.end) && (
               <Typography component = 'span' variant = 'caption' classes = {{
                 root: classes.timeColor,
               }}>
-                {item.start.format(monthYearFormat)} - {item.end.format(monthYearFormat)}
+                {moment(item.start, defaultTimelineFormat).format(monthYearFormat)} -&nbsp;
+                {item.end
+                  ? moment(item.end, defaultTimelineFormat).format(monthYearFormat)
+                  : moment().format(monthYearFormat)}
               </Typography>
             )}
             <Box mt = {2}>

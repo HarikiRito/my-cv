@@ -92,6 +92,7 @@ const profileInfos = [{
 const MatProfile: ComponentType<MatProfileProps> = (props) => {
   const classes = useStyles(props)
   const {t}     = useTranslation('common')
+
   return (
     <Fragment>
       <Paper elevation = {1}>

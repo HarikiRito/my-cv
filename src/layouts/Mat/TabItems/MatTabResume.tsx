@@ -1,10 +1,11 @@
-import React, {ComponentType} from 'react'
+import React, {ComponentType, useEffect, useState} from 'react'
 import {makeStyles, Theme, createStyles, Grid} from '@material-ui/core'
 import {compose} from 'recompose'
 import HeadingTypography from '@/components/HeadingTypography'
 import {useTranslation} from 'react-i18next'
-import Timeline, {TimelineItems, defaultTimelineFormat} from '@/components/Timeline'
+import Timeline, {TimelineItem, defaultTimelineFormat} from '@/components/Timeline'
 import moment from 'moment'
+import _ from 'lodash'
 
 interface MatTabResumeProps {
 
@@ -18,7 +19,8 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 )
 
-const workExperience: TimelineItems[] = [{
+const workExperience: TimelineItem[] = [{
+  index: 1,
   title: 'profile:job_1.title',
   start: moment('2018-08', defaultTimelineFormat),
   end: moment('2019-03', defaultTimelineFormat),
@@ -28,7 +30,16 @@ const workExperience: TimelineItems[] = [{
 
 const MatTabResume: ComponentType<MatTabResumeProps> = (props) => {
   const classes = useStyles(props)
-  const {t}     = useTranslation(['common', 'profile'])
+
+  const {t}               = useTranslation(['common', 'profile'])
+  const [works, setWorks] = useState<TimelineItem[]>([])
+
+
+  useEffect(() => {
+    const jobs       = t('profile:jobs') as TimelineItem[]
+    const sortedJobs = _.orderBy<TimelineItem>(jobs, ['index'], ['desc'])
+    setWorks(sortedJobs)
+  }, [])
 
   return (
     <div>
@@ -37,13 +48,13 @@ const MatTabResume: ComponentType<MatTabResumeProps> = (props) => {
           <HeadingTypography>
             {t('common:resume')}
           </HeadingTypography>
-          <Timeline items = {workExperience} />
+          <Timeline items = {works} />
         </Grid>
         <Grid item md = {6}>
           <HeadingTypography>
             {t('common:education')}
           </HeadingTypography>
-          <Timeline items = {workExperience} />
+          <Timeline items = {works} />
         </Grid>
       </Grid>
     </div>
