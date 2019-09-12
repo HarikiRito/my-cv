@@ -50,7 +50,7 @@ const useStyles                    = makeStyles((theme: Theme) => {
       fontWeight: 100,
     },
     event: {
-      borderBottom: '1px dashed',
+      // borderBottom: '1px dashed',
       paddingBottom: spacing * 0.5,
       marginBottom: spacing,
       position: 'relative',

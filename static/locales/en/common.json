@@ -1,3 +1,9 @@
 {
-  "name": "Name"
+  "name": "Name",
+  "birth_day": "Birthday",
+  "job": "Job",
+  "email": "Email",
+  "skype": "Skype",
+  "facebook": "Facebook",
+  "linkedin": "Linkedin"
 }

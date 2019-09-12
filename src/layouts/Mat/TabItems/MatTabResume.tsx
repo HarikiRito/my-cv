@@ -19,21 +19,11 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 )
 
-const workExperience: TimelineItem[] = [{
-  index: 1,
-  title: 'profile:job_1.title',
-  start: moment('2018-08', defaultTimelineFormat),
-  end: moment('2019-03', defaultTimelineFormat),
-  body: 'profile:job_1.body',
-  company: 'profile:job_1.company',
-}]
-
 const MatTabResume: ComponentType<MatTabResumeProps> = (props) => {
   const classes = useStyles(props)
 
   const {t}               = useTranslation(['common', 'profile'])
   const [works, setWorks] = useState<TimelineItem[]>([])
-
 
   useEffect(() => {
     const jobs       = t('profile:jobs') as TimelineItem[]

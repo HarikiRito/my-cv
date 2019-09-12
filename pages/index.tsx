@@ -1,4 +1,4 @@
-import React, {useEffect, Fragment} from 'react'
+import React, {useEffect, Fragment, useRef, useState} from 'react'
 import {Button, makeStyles, createStyles, Theme, Grid, Box} from '@material-ui/core'
 import {NextComponentType} from 'next'
 import {useTranslation} from 'react-i18next'
@@ -22,8 +22,8 @@ const useStyles = makeStyles((theme: Theme) =>
 )
 
 const Home: NextComponentType = (props) => {
-  const classes = useStyles(props)
-  const {t}     = useTranslation(['common'])
+  const classes             = useStyles(props)
+  const {t}                 = useTranslation(['common'])
 
   return (
     <Fragment>

@@ -17,6 +17,7 @@ import {useTranslation} from 'react-i18next'
 import {grey} from '@material-ui/core/colors'
 import {AccountCircle, VerifiedUser, Work, Email} from '@material-ui/icons'
 import {Facebook, Linkedin, Skype} from 'mdi-material-ui'
+import LangSwitch from '@/components/LangSwitch'
 
 interface MatProfileProps {
 
@@ -25,7 +26,7 @@ interface MatProfileProps {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     paddingProfile: {
-      padding: '0.75rem',
+      padding: 16,
     },
     myName: {
       fontWeight: 500,
@@ -47,54 +48,64 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const profileInfos = [{
   key: 'common:name',
-  value: 'profile:name',
+  value: 'Nghiêm Xuân Hậu',
   labelProps: {
     StepIconComponent: () => <AccountCircle color = 'primary' />,
   },
 }, {
   key: 'common:birth_day',
-  value: 'profile:birth_day',
+  value: '08/09/1998',
   labelProps: {
     StepIconComponent: () => <VerifiedUser color = 'primary' />,
   },
 }, {
   key: 'common:job',
-  value: 'profile:job',
+  value: 'Software Engineer',
   labelProps: {
     StepIconComponent: () => <Work color = 'primary' />,
   },
 }, {
   key: 'common:email',
-  value: 'profile:email',
+  value: 'nxh0809@gmail.com',
   labelProps: {
     StepIconComponent: () => <Email color = 'primary' />,
   },
 }, {
-  key: 'common:skype',
-  value: 'profile:skype',
+  key: '',
+  value: '',
   labelProps: {
-    StepIconComponent: () => <Skype color = 'primary' />,
+    StepIconComponent: () => <a href = 'skype:nxh0809@gmail.com?chat'>
+      <Skype color = 'primary' />
+    </a>,
   },
 }, {
-  key: 'common:linkedin',
-  value: 'profile:linkedin',
+  key: '',
+  value: '',
   labelProps: {
-    StepIconComponent: () => <Linkedin color = 'primary' />,
+    StepIconComponent: () => (
+      <a target = '_blank' rel = 'noopener noreferrer' href = 'https://www.linkedin.com/in/harikirito/'>
+        <Linkedin color = 'primary' />
+      </a>
+    ),
   },
 }, {
-  key: 'common:facebook',
-  value: 'profile:facebook',
+  key: '',
+  value: '',
   labelProps: {
-    StepIconComponent: () => <Facebook color = 'primary' />,
+    StepIconComponent: () => <a target = '_blank' rel = 'noopener noreferrer'
+                                href = 'https://www.facebook.com/harikirito2'>
+      <Facebook color = 'primary' />
+    </a>,
   },
 }]
 
 const MatProfile: ComponentType<MatProfileProps> = (props) => {
   const classes = useStyles(props)
-  const {t}     = useTranslation('common')
+  const {t}     = useTranslation(['common', 'profile'])
 
   return (
     <Fragment>
+      <LangSwitch />
       <Paper elevation = {1}>
         <Typography component = 'div' className = {classes.paddingProfile}>
           <Box m = {1} mb = {0} component = 'p' className = {classes.myName}>
@@ -108,12 +119,14 @@ const MatProfile: ComponentType<MatProfileProps> = (props) => {
           <img src = '/static/images/owl.jpg' className = {classes.avatar} />
         </Box>
         <Box>
-          <Stepper activeStep = {-1} orientation = 'vertical'>
+          <Stepper activeStep = {-1} orientation = 'vertical' classes = {{
+            root: classes.paddingProfile,
+          }}>
             {profileInfos.map(v => (
               <Step key = {v.key}>
                 <StepLabel {...v.labelProps} classes = {{
                   label: classes.labelProfile,
-                }}>{t(v.key)}: {t(v.value)}</StepLabel>
+                }}>{t(v.key)}: {v.value}</StepLabel>
               </Step>
             ))}
           </Stepper>

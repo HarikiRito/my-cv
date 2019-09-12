@@ -2,14 +2,18 @@ import React from 'react'
 import Document, {Head, Main, NextScript} from 'next/document'
 import {ServerStyleSheets} from '@material-ui/styles'
 import {theme} from '@/components/Theme/Theme'
+import {removeCookie} from '@/utils'
 
 class MyDocument extends Document {
+  componentDidMount(): void {
+    removeCookie('next-i18next')
+  }
+
   render() {
     return (
       <html lang = 'en'>
       <Head>
         <meta charSet = 'utf-8' />
-        {/* Use minimum-scale=1 to enable GPU rasterization */}
         <meta
           name = 'viewport'
           content = 'minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no'

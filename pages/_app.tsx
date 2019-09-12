@@ -6,20 +6,23 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import {theme} from '@/components/Theme/Theme'
 import {compose} from 'recompose'
 import {appWithTranslation} from '@/i18n'
+import {removeCookie} from '@/utils'
 
 class MyApp extends App {
+
   componentDidMount() {
     // Remove the server-side injected CSS.
+
     const jssStyles = document.querySelector('#jss-server-side')
     if (jssStyles) {
       // jssStyles.parentNode.removeChild(jssStyles)
     }
   }
 
-  componentDidUpdate(prevProps, prevState): void {
+  componentDidUpdate(prevProps, prevState, snapshot?: any): void {
     const jssStyles = document.querySelector('#jss-server-side')
     if (jssStyles) {
-      jssStyles.parentNode.removeChild(jssStyles)
+      // jssStyles.parentNode.removeChild(jssStyles)
     }
   }
 

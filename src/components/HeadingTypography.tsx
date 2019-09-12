@@ -1,5 +1,5 @@
 import React, {ComponentType, Fragment} from 'react'
-import {makeStyles, Theme, createStyles, Typography, Box} from '@material-ui/core'
+import {makeStyles, Theme, createStyles, Typography, Box, NoSsr} from '@material-ui/core'
 import {compose} from 'recompose'
 import {hexToRgb, fade} from '@material-ui/core/styles'
 
@@ -34,14 +34,16 @@ const HeadingTypography: ComponentType<HeadingTypographyProps> = (props) => {
 
   return (
     <Fragment>
-      <Box mb = {4}>
-        <Typography component = 'span' classes = {{
-          root: classes.rootTypo,
-          body1: classes.body,
-        }}>
-          {props.children}
-        </Typography>
-      </Box>
+      <NoSsr>
+        <Box mb = {4}>
+          <Typography component = 'span' classes = {{
+            root: classes.rootTypo,
+            body1: classes.body,
+          }}>
+            {props.children}
+          </Typography>
+        </Box>
+      </NoSsr>
     </Fragment>
   )
 }

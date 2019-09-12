@@ -1,3 +1,9 @@
 {
-  "name": "Tên"
+  "name": "Tên",
+  "birth_day": "Ngày sinh",
+  "job": "Công việc",
+  "email": "Email",
+  "skype": "Skype",
+  "facebook": "Facebook",
+  "linkedin": "Linkedin"
 }
