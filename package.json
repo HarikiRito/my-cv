@@ -25,7 +25,8 @@
     "react": "16.9.0",
     "react-dom": "16.9.0",
     "react-slick": "^0.25.2",
-    "recompose": "^0.30.0"
+    "recompose": "^0.30.0",
+    "ts-node": "^8.3.0"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.9",
@@ -44,7 +45,6 @@
     "enzyme-adapter-react-16": "^1.14.0",
     "nodemon": "^1.19.1",
     "ts-jest": "^24.1.0",
-    "ts-node": "^8.3.0",
     "typescript": "^3.6.3"
   }
 }
