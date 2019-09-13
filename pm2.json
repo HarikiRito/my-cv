@@ -4,7 +4,9 @@
       "name": "cv",
       "script": "dist/server",
       "watch": "./",
-      "log_date_format": "YYYY-MM-DD HH:mm Z"
+      "env_production": {
+        "NODE_ENV": "production"
+      }
     }
   ]
 }
