@@ -8,9 +8,9 @@
   "scripts": {
     "dev": "nodemon",
     "build": "next build && tsc -p tsconfig.server.json",
-    "start": "cross-env NODE_ENV=production node dist/server",
-    "simple-start": "cross-env NODE_ENV=production pm2 start pm2.json",
-    "server-start": "cross-env NODE_ENV=production node dist/server"
+    "start": "cross-env NODE_ENV=production pm2 start pm",
+    "simple-start": "cross-env NODE_ENV=production node dist/server",
+    "server-start": "cross-env NODE_ENV=production pm2 start pm"
   },
   "dependencies": {
     "@material-ui/core": "^4.4.2",
