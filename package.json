@@ -1,10 +1,7 @@
 {
   "name": "next-cv",
   "version": "0.1.0",
-  "private": true,
-  "engines": {
-    "node": "10.15.3"
-  },
+  "private": false,
   "scripts": {
     "dev": "nodemon",
     "build": "next build",
