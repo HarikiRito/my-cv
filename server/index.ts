@@ -5,7 +5,9 @@ import express, {Request, Response} from 'express'
 import nextI18NextMiddleware from 'next-i18next/middleware'
 import nextI18next from '../src/i18n'
 
-const port   = parseInt(process.env.PORT || '3001', 10)
+require('dotenv').config()
+
+const port   = parseInt(process.env.PORT || '3000', 10)
 const dev    = process.env.NODE_ENV !== 'production'
 const app    = next({dev})
 const handle = app.getRequestHandler()

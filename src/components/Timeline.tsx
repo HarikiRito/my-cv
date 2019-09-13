@@ -19,6 +19,7 @@ export interface TimelineItem {
   start?: MomentInput
   end?: MomentInput
   body?: string
+  lines: string[]
   company?: string
 }
 
@@ -75,6 +76,9 @@ const useStyles                    = makeStyles((theme: Theme) => {
       marginBlockStart: 0,
       marginBlockEnd: 0,
     },
+    bodyLine: {
+      color: grey[700],
+    },
   })
 })
 
@@ -86,31 +90,44 @@ const Timeline: ComponentType<TimelineProps> = (props) => {
   return (
     <Fragment>
       <ul className = {classes.timeline}>
-        {items.map(item => (
-          <li className = {classes.event} key = {item.index}>
-            <h3 className = {classes.h3}>{t(item.title)}</h3>
-            {item.company && (
-              <Typography component = 'p' variant = 'caption'>
-                {t(item.company)}
-              </Typography>
-            )}
-            {(item.start || item.end) && (
-              <Typography component = 'span' variant = 'caption' classes = {{
-                root: classes.timeColor,
-              }}>
-                {moment(item.start, defaultTimelineFormat).format(monthYearFormat)} -&nbsp;
-                {item.end
-                  ? moment(item.end, defaultTimelineFormat).format(monthYearFormat)
-                  : moment().format(monthYearFormat)}
-              </Typography>
-            )}
-            <Box mt = {2}>
-              <Typography component = 'p' variant = 'body2'>
-                {t(item.body)}
-              </Typography>
-            </Box>
-          </li>
-        ))}
+        {items.map(item => {
+          let lines = item.lines || []
+          return (
+            (
+              <li className = {classes.event} key = {item.index}>
+                <h3 className = {classes.h3}>{t(item.title)}</h3>
+                {item.company && (
+                  <Typography component = 'p' variant = 'caption'>
+                    {t(item.company)}
+                  </Typography>
+                )}
+                {(item.start || item.end) && (
+                  <Typography component = 'span' variant = 'caption' classes = {{
+                    root: classes.timeColor,
+                  }}>
+                    {moment(item.start, defaultTimelineFormat).format(monthYearFormat)} -&nbsp;
+                    {item.end
+                      ? moment(item.end, defaultTimelineFormat).format(monthYearFormat)
+                      : moment().format(monthYearFormat)}
+                  </Typography>
+                )}
+                <Box mt = {2}>
+                  <Typography component = 'p' variant = 'body1'>
+                    {t(item.body)}
+                  </Typography>
+                  <Box mt = {2} />
+                  {lines.map(line => (
+                    <Typography component = 'p' variant = 'body2' key = {line} classes = {{
+                      root: classes.bodyLine,
+                    }}>
+                      {line}
+                    </Typography>
+                  ))}
+                </Box>
+              </li>
+            )
+          )
+        })}
       </ul>
     </Fragment>
   )

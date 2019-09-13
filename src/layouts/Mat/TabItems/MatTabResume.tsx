@@ -22,14 +22,14 @@ const useStyles = makeStyles((theme: Theme) =>
 const MatTabResume: ComponentType<MatTabResumeProps> = (props) => {
   const classes = useStyles(props)
 
-  const {t}               = useTranslation(['common', 'profile'])
+  const {t, i18n}         = useTranslation(['common', 'profile'])
   const [works, setWorks] = useState<TimelineItem[]>([])
 
   useEffect(() => {
     const jobs       = t('profile:jobs') as TimelineItem[]
     const sortedJobs = _.orderBy<TimelineItem>(jobs, ['index'], ['desc'])
     setWorks(sortedJobs)
-  }, [])
+  }, [i18n.language])
 
   return (
     <div>

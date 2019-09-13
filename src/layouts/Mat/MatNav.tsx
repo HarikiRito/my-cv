@@ -5,6 +5,7 @@ import MatTabAboutMe from '@/layouts/Mat/TabItems/MatTabAboutMe'
 import MatTabResume from '@/layouts/Mat/TabItems/MatTabResume'
 import {grey} from '@material-ui/core/colors'
 import LangSwitch from '@/components/LangSwitch'
+import {useTranslation} from 'react-i18next'
 
 interface MatNavProps {
 
@@ -22,7 +23,8 @@ const useStyles = makeStyles((theme: Theme) =>
 const MatNav: ComponentType<MatNavProps> = (props) => {
   const classes                 = useStyles(props)
   const [tabIndex, setTabIndex] = useState(0)
-
+  const {i18n}                  = useTranslation(['common', 'profile'])
+  
   const handleTabChange = (event: ChangeEvent<HTMLElement>, value: number) => {
     setTabIndex(value)
   }

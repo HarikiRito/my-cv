@@ -10,6 +10,7 @@
       "start": "2018-06",
       "end": "2019-03",
       "body": "wow",
+      "lines": [],
       "company": "VNP Group"
     },
     {
@@ -18,6 +19,7 @@
       "start": "2019-03",
       "end": null,
       "body": "wow 2",
+      "lines": [],
       "company": "FUTA"
     }
   ]

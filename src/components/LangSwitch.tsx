@@ -12,6 +12,8 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     icon: {
       width: 20,
+      height: 12,
+      transform: 'translateY(2px)',
     },
     floating: {
       position: 'absolute',

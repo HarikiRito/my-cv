@@ -1,25 +1,28 @@
 {
-  "job_1": {
-    "index": 1,
-    "title": "abc",
-    "start": "2018-06",
-    "end": "2019-03",
-    "body": "wow",
-    "company": "VNP Group"
-  },
-  "jobs": [{
-    "index": 0,
-    "title": "abc",
-    "start": "2018-06",
-    "end": "2019-03",
-    "body": "wow",
-    "company": "VNP Group"
-  },{
-    "index": 1,
-    "title": "abc",
-    "start": "2019-03",
-    "end": null,
-    "body": "wow 2",
-    "company": "FUTA"
-  }]
+  "name": "Nghiêm Xuân Hậu",
+  "job": "Software Engineer",
+  "birth_day": "08/09/1998",
+  "email": "nxh0809@gmail.com",
+  "jobs": [
+    {
+      "index": 0,
+      "title": "Full-Stack Web Developer",
+      "start": "2018-07",
+      "end": "2019-03",
+      "lines": [
+        "Thiết kế database cho toàn bộ hệ thống bằng MySQL"
+      ],
+      "body": "Thiết kế giải pháp hoàn chỉnh cho hệ thống homestay Westay.vn",
+      "company": "VNP Group"
+    },
+    {
+      "index": 1,
+      "title": "abc",
+      "start": "2019-03",
+      "end": null,
+      "lines": [],
+      "body": "wow 2",
+      "company": "FUTA"
+    }
+  ]
 }
