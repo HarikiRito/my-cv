@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "cv",
+      "script": "dist/server",
+      "watch": "./",
+      "log_date_format": "YYYY-MM-DD HH:mm Z"
+    }
+  ]
+}
