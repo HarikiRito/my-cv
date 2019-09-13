@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "nodemon",
     "build": "next build && tsc -p tsconfig.server.json",
-    "start": "cross-env NODE_ENV=production nodemon dist/server",
+    "start": "cross-env NODE_ENV=production node dist/server",
     "simple-start": "cross-env NODE_ENV=production node dist/server",
     "server-start": "cross-env NODE_ENV=production pm2 start pm2.json"
   },
