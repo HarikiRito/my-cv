@@ -69,18 +69,18 @@ const MatTabAboutMe: ComponentType<MatTabAboutMeProps> = (props) => {
         {t('common:about_me')}
       </HeadingTypography>
       <Box mb = {4}>
-        <Typography component = 'p'>
+        <Typography component = 'p' variant = 'body2'>
           {t('profile:about_me')}
         </Typography>
       </Box>
-      <HeadingTypography>
-        {t('common:skills')}
-      </HeadingTypography>
+      {/*      <HeadingTypography>
+        {t('common:skills.name')}
+      </HeadingTypography>*/}
       <Grid container spacing = {6}>
         <Grid container item md = {6}>
           <Grid item md = {12}>
             <HeadingTypography>
-              {t('common:programming_languages')}
+              {t('common:skills.programming_languages')}
             </HeadingTypography>
           </Grid>
           {programmingLanguages.map(v => (
@@ -92,7 +92,7 @@ const MatTabAboutMe: ComponentType<MatTabAboutMeProps> = (props) => {
         <Grid container item md = {6}>
           <Grid item md = {12}>
             <HeadingTypography>
-              {t('common:technologies')}
+              {t('common:skills.technologies')}
             </HeadingTypography>
           </Grid>
           {techs.map(v => (

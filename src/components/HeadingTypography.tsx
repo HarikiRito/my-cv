@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) =>
         bottom: 4,
         position: 'absolute',
         content: '\'\'',
-        borderBottom: `8px solid ${fade(theme.palette.primary.main, .6)}`,
+        borderBottom: `8px solid ${fade(theme.palette.primary.main, .45)}`,
       },
     },
     body: {

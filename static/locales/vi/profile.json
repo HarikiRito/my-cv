@@ -1,28 +1,49 @@
 {
   "name": "Nghiêm Xuân Hậu",
-  "job": "Software Engineer",
+  "job": "Lập trình viên",
   "birth_day": "08/09/1998",
   "email": "nxh0809@gmail.com",
+  "about_me": "Với phương châm lấy việc code làm niềm vui, tôi luôn mong muốn được học hỏi thêm nhiều kiến thức mới. Có tình yêu mãnh liệt với Typescript",
   "jobs": [
     {
       "index": 0,
-      "title": "Full-Stack Web Developer",
+      "title": "Lập trình web Full-Stack",
       "start": "2018-07",
       "end": "2019-03",
       "lines": [
-        "Thiết kế database cho toàn bộ hệ thống bằng MySQL"
+        "Thiết kế database cho hệ thống sử dụng MySQL.",
+        "Thiết lập hệ thống backend (Lumen - Laravel) theo kiến trúc REST.",
+        "Khởi tạo các dự án frontend sử dụng React + Typescript.",
+        "Thiết kế UI/UX chính cho trang web Westay.vn",
+        "Đã từng làm việc với CI/CD bằng TravisCI để tự động hóa quá trình nâng cấp dự án.",
+        "Có kinh nghiệm với AWS S3, Lambda dùng để tự động nén ảnh của người dùng tải lên."
       ],
       "body": "Thiết kế giải pháp hoàn chỉnh cho hệ thống homestay Westay.vn",
       "company": "VNP Group"
     },
     {
       "index": 1,
-      "title": "abc",
+      "title": "Lập trình backend (Odoo)",
       "start": "2019-03",
       "end": null,
-      "lines": [],
-      "body": "wow 2",
-      "company": "FUTA"
+      "lines": [
+        "Thiết kế module ERP cho hệ thống",
+        "Sử dụng Docker để kết nối các dự án vói nhau"
+      ],
+      "body": "Phát triển hệ thống ERP sử dụng Odoo",
+      "company": "FUTA Express"
+    }
+  ],
+  "educations": [
+    {
+      "index": 0,
+      "title": "Đại học Bách Khoa Hà Nội",
+      "start": "2016-09",
+      "end": "2021-06",
+      "lines": [
+      ],
+      "body": "",
+      "company": ""
     }
   ]
 }

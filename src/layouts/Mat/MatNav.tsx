@@ -23,8 +23,8 @@ const useStyles = makeStyles((theme: Theme) =>
 const MatNav: ComponentType<MatNavProps> = (props) => {
   const classes                 = useStyles(props)
   const [tabIndex, setTabIndex] = useState(0)
-  const {i18n}                  = useTranslation(['common', 'profile'])
-  
+  const {t}                     = useTranslation(['common', 'profile'])
+
   const handleTabChange = (event: ChangeEvent<HTMLElement>, value: number) => {
     setTabIndex(value)
   }
@@ -37,9 +37,8 @@ const MatNav: ComponentType<MatNavProps> = (props) => {
           <Tabs value = {tabIndex} onChange = {handleTabChange} aria-label = 'simple tabs example'
                 indicatorColor = 'primary'
           >
-            <Tab href = '#home' label = 'Item One' />
-            <Tab href = '#resume' label = 'Item Two' />
-            <Tab label = 'Item Three' />
+            <Tab href = '#intro' label = {t('common:tabs.intro')} />
+            <Tab href = '#resume' label = {t('common:tabs.resume')} />
           </Tabs>
         </AppBar>
         <Box mt = {4}>

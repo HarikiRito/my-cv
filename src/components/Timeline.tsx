@@ -117,11 +117,13 @@ const Timeline: ComponentType<TimelineProps> = (props) => {
                   </Typography>
                   <Box mt = {2} />
                   {lines.map(line => (
-                    <Typography component = 'p' variant = 'body2' key = {line} classes = {{
-                      root: classes.bodyLine,
-                    }}>
-                      {line}
-                    </Typography>
+                    <Box mt = {1} key = {line}>
+                      <Typography component = 'p' variant = 'body2' classes = {{
+                        root: classes.bodyLine,
+                      }}>
+                        {line}
+                      </Typography>
+                    </Box>
                   ))}
                 </Box>
               </li>

@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme: Theme) =>
     avatar: {
       maxWidth: '100%',
       height: 'auto',
-      clipPath: 'polygon(0 10%, 100% 0%, 100% 90%, 0% 100%)',
+      clipPath: 'polygon(0 8%, 100% 0%, 100% 92%, 0% 100%)',
     },
     labelProfile: {
       paddingTop: 4,
@@ -116,7 +116,7 @@ const MatProfile: ComponentType<MatProfileProps> = (props) => {
           </Box>
         </Typography>
         <Box mt = {-3}>
-          <img src = '/static/images/owl.jpg' className = {classes.avatar} />
+          <img src = '/static/images/avatar.jpg' className = {classes.avatar} />
         </Box>
         <Box>
           <Stepper activeStep = {-1} orientation = 'vertical' classes = {{

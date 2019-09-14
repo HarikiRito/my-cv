@@ -7,11 +7,18 @@ import {theme} from '@/components/Theme/Theme'
 import {compose} from 'recompose'
 import {appWithTranslation} from '@/i18n'
 import {removeCookie} from '@/utils'
+import * as http from 'http'
 
 class MyApp extends App {
 
   componentDidMount() {
     // Remove the server-side injected CSS.
+    if (process.env.NODE_ENV === 'production') {
+      setInterval(() => {
+        http.get(window.location.href)
+      }, 300000)
+    }
+
 
     const jssStyles = document.querySelector('#jss-server-side')
     if (jssStyles) {
@@ -32,7 +39,7 @@ class MyApp extends App {
     return (
       <React.Fragment>
         <Head>
-          <title>My page</title>
+          <title>Circumstances Vitae</title>
         </Head>
         <ThemeProvider theme = {theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
