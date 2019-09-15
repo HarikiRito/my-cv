@@ -48,18 +48,16 @@ const LangSwitch: ComponentType<LangSwitchProps> = (props) => {
   }, [i18n.language])
 
   return (
-    <NoSsr>
-      <div className = {classes.floating}>
-        <img src = '/static/images/us.png' alt = '' className = {classes.icon} />
-        <Switch
-          color = 'primary'
-          checked = {isVi}
-          onChange = {handleChange}
-          inputProps = {{'aria-label': 'secondary checkbox'}}
-        />
-        <img src = '/static/images/vn.png' alt = '' className = {classes.icon} />
-      </div>
-    </NoSsr>
+    <div className = {classes.floating}>
+      <img src = '/static/images/us.png' alt = '' className = {classes.icon} />
+      <Switch
+        color = 'primary'
+        checked = {isVi}
+        onChange = {handleChange}
+        inputProps = {{'aria-label': 'secondary checkbox'}}
+      />
+      <img src = '/static/images/vn.png' alt = '' className = {classes.icon} />
+    </div>
   )
 }
 
