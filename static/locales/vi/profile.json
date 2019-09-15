@@ -3,7 +3,7 @@
   "job": "Lập trình viên",
   "birth_day": "08/09/1998",
   "email": "nxh0809@gmail.com",
-  "about_me": "Với phương châm lấy việc code làm niềm vui, tôi luôn mong muốn được học hỏi thêm nhiều kiến thức mới. Có tình yêu mãnh liệt với Typescript",
+  "about_me": "Với phương châm lấy việc code làm niềm vui, tôi luôn mong muốn được học hỏi thêm nhiều kiến thức mới. Khả năng tiếp thu kiến thức nhanh.",
   "jobs": [
     {
       "index": 0,
@@ -28,7 +28,7 @@
       "end": null,
       "lines": [
         "Thiết kế module ERP cho hệ thống",
-        "Sử dụng Docker để kết nối các dự án vói nhau"
+        "Sử dụng Docker để kết nối các dự án với nhau"
       ],
       "body": "Phát triển hệ thống ERP sử dụng Odoo",
       "company": "FUTA Express"

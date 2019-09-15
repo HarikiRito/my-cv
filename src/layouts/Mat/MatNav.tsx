@@ -1,11 +1,26 @@
 import React, {ChangeEvent, ComponentType, Fragment, useState} from 'react'
 import {compose} from 'recompose'
-import {makeStyles, Theme, createStyles, AppBar, Tabs, Tab, Box, Typography, Paper, NoSsr} from '@material-ui/core'
+import {
+  makeStyles,
+  Theme,
+  createStyles,
+  AppBar,
+  Tabs,
+  Tab,
+  Box,
+  Typography,
+  Paper,
+  NoSsr,
+  Fab,
+  Button,
+} from '@material-ui/core'
 import MatTabAboutMe from '@/layouts/Mat/TabItems/MatTabAboutMe'
 import MatTabResume from '@/layouts/Mat/TabItems/MatTabResume'
 import {grey} from '@material-ui/core/colors'
 import LangSwitch from '@/components/LangSwitch'
 import {useTranslation} from 'react-i18next'
+import {Add} from '@material-ui/icons'
+import {Skype, Linkedin, LinkedinBox} from 'mdi-material-ui'
 
 interface MatNavProps {
 
@@ -16,6 +31,35 @@ const useStyles = makeStyles((theme: Theme) =>
     appBarPrimaryColor: {
       backgroundColor: '#fff !important',
       color: grey[700],
+    },
+    socialRoot: {
+      position: 'absolute',
+      right: theme.spacing(2),
+      display: 'flex',
+      alignItems: 'center',
+      height: '100%',
+    },
+    link: {
+      height: 24,
+      paddingRight: theme.spacing(1),
+    },
+    icon: {
+      transition: theme.transitions.create(['width', 'height', 'margin'], {
+        duration: 200,
+        easing: 'ease-in-out',
+      }),
+      '&:hover': {
+        width: 30,
+        height: 30,
+        margin: -3,
+      },
+    },
+    buttonContact: {
+      boxShadow: 'none',
+      borderRadius: 28,
+    },
+    labelContact: {
+      fontSize: '0.675rem',
     },
   }),
 )
@@ -39,6 +83,22 @@ const MatNav: ComponentType<MatNavProps> = (props) => {
           >
             <Tab href = '#intro' label = {t('common:tabs.intro')} />
             <Tab href = '#resume' label = {t('common:tabs.resume')} />
+            <Box className = {classes.socialRoot}>
+              <a className = {classes.link} href = 'skype:nxh0809@gmail.com?chat'>
+                <Skype color = 'primary' className = {classes.icon} />
+              </a>
+              <a className = {classes.link} target = '_blank' rel = 'noopener noreferrer'
+                 href = 'https://www.linkedin.com/in/harikirito/'>
+                <LinkedinBox color = 'primary' className = {classes.icon} />
+              </a>
+              <Button color = 'primary' variant = 'contained' component = 'a' href = {`mailto:${t('profile:email')}`}
+                      classes = {{
+                        root: classes.buttonContact,
+                        label: classes.labelContact,
+                      }}>
+                {t('common:contact')}
+              </Button>
+            </Box>
           </Tabs>
         </AppBar>
         <Box mt = {4}>

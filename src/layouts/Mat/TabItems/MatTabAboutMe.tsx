@@ -30,10 +30,10 @@ const programmingLanguages = [{
   value: 75,
 }, {
   key: 'Java',
-  value: 55,
+  value: 40,
 }, {
   key: 'Dart',
-  value: 40,
+  value: 55,
 }]
 
 const techs = [{

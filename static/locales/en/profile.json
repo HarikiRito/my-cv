@@ -3,24 +3,47 @@
   "job": "Software Engineer",
   "birth_day": "08/09/1998",
   "email": "nxh0809@gmail.com",
+  "about_me": "I live by the code, make fun out of coding every day. I always want to learn and adapt more knowledge about the world, especially in programming (and music too).",
   "jobs": [
     {
       "index": 0,
-      "title": "abc",
-      "start": "2018-06",
+      "title": "Full-Stack Web Developer",
+      "start": "2018-07",
       "end": "2019-03",
-      "body": "wow",
-      "lines": [],
+      "lines": [
+        "Database design using MySQL.",
+        "Backend design (Lumen - Laravel) base on REST architecture",
+        "Initialize and setup frontend project using React + Typescript",
+        "Main UI/UX designer for website Westay.vn",
+        "Had experience in working with CI/CD using TravisCI for automate upgrade project and deploy without downtime",
+        "Had experience in AWS S3, Lambda Function for automating image compression by user"
+      ],
+      "body": "Full architecture solution for homestay system base at Westay.vn",
       "company": "VNP Group"
     },
     {
       "index": 1,
-      "title": "abc",
+      "title": "Backend Developer (Odoo)",
       "start": "2019-03",
       "end": null,
-      "body": "wow 2",
-      "lines": [],
-      "company": "FUTA"
+      "lines": [
+        "Design module for ERP system",
+        "Using Docker for linking projects"
+      ],
+      "body": "Develop ERP system using Odoo",
+      "company": "FUTA Express"
+    }
+  ],
+  "educations": [
+    {
+      "index": 0,
+      "title": "Hanoi University of Science and Technology",
+      "start": "2016-09",
+      "end": "2021-06",
+      "lines": [
+      ],
+      "body": "",
+      "company": ""
     }
   ]
 }

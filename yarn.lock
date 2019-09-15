@@ -764,7 +764,7 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.4.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.4.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
   integrity sha512-28QvEGyQyNkB0/m2B4FU7IEZGK2NUrcMtT6BZEFALTguLk+AUT6ofsHtPk5QyjAdUkpMJ+/Em+quwz4HOt30AQ==
@@ -831,12 +831,12 @@
     react-transition-group "^4.0.0"
     warning "^4.0.1"
 
-"@material-ui/icons@^4.2.1":
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/@material-ui/icons/-/icons-4.2.1.tgz#fe2f1c4f60c24256d244a69d86d0c00e8ed4037e"
-  integrity sha512-FvSD5lUBJ66frI4l4AYAPy2CH14Zs2Dgm0o3oOMr33BdQtOAjCgbdOcvPBeaD1w6OQl31uNW3CKOE8xfPNxvUQ==
+"@material-ui/icons@^4.4.1":
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/@material-ui/icons/-/icons-4.4.1.tgz#a09d53275a5d73a77ee621f91c005a1793432df7"
+  integrity sha512-ilo6rSgsI3B5L7s1H3tBS1x77sJqPql3QJDYzVi2TVluZLCTfRKjpbYYDUwolEAQC0MzXLjVbXHqJ97VeJqpmQ==
   dependencies:
-    "@babel/runtime" "^7.2.0"
+    "@babel/runtime" "^7.4.4"
 
 "@material-ui/styles@^4.4.1":
   version "4.4.1"
@@ -5243,10 +5243,10 @@ next-compose-plugins@^2.2.0:
   resolved "https://registry.yarnpkg.com/next-compose-plugins/-/next-compose-plugins-2.2.0.tgz#95cd8eb40ab0652070d76572fb648354191628b0"
   integrity sha512-ChUlpT9tWfJ7YxqGw/WQ2T1gf8EeX93n1XqeQw0lkvGa7seszahvF4eOZUJoq7Hetsbzg4UHVnPoCXfXTyQR3g==
 
-next-i18next@^0.54.0:
-  version "0.54.0"
-  resolved "https://registry.yarnpkg.com/next-i18next/-/next-i18next-0.54.0.tgz#8f8be59ac7b3275ce23c093abf4302b0413ed76b"
-  integrity sha512-Xh29nMzxWk4FzxI6W+yuWtB9MhSPgDksaYH1/T9J12VtqjmgfF5x1kMTb5nRyn6XeklVq847CemcwSrPNclF5w==
+next-i18next@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/next-i18next/-/next-i18next-1.2.0.tgz#d2d8364a94a4df6ed81c6c48f1033a5c98c36f34"
+  integrity sha512-F65wTbxK/Utq8Gbyvwpq6Cf2/H01bQ6Vj7v9ec31wfLK2ORXVNVXk7t/RbeCOe5AMH3jLNlJT3iG3Vdn8r6CTA==
   dependencies:
     core-js "^2"
     detect-node "^2.0.4"

@@ -5,5 +5,20 @@
   "email": "Email",
   "skype": "Skype",
   "facebook": "Facebook",
-  "linkedin": "Linkedin"
+  "linkedin": "Linkedin",
+  "about_me": "About me",
+  "contact": "Contact",
+  "skills": {
+    "name": "Skils",
+    "programming_languages": "Programming Languages",
+    "technologies": "Technologies"
+  },
+  "tabs": {
+    "intro": "Introduction",
+    "resume": "Resume"
+  },
+  "history": {
+    "working": "Jobs History",
+    "education": "Educations History"
+  }
 }

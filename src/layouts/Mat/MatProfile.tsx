@@ -48,54 +48,27 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const profileInfos = [{
   key: 'common:name',
-  value: 'Nghiêm Xuân Hậu',
+  value: 'profile:name',
   labelProps: {
     StepIconComponent: () => <AccountCircle color = 'primary' />,
   },
 }, {
   key: 'common:birth_day',
-  value: '08/09/1998',
+  value: 'profile:birth_day',
   labelProps: {
     StepIconComponent: () => <VerifiedUser color = 'primary' />,
   },
 }, {
   key: 'common:job',
-  value: 'Software Engineer',
+  value: 'profile:job',
   labelProps: {
     StepIconComponent: () => <Work color = 'primary' />,
   },
 }, {
   key: 'common:email',
-  value: 'nxh0809@gmail.com',
+  value: 'profile:email',
   labelProps: {
     StepIconComponent: () => <Email color = 'primary' />,
-  },
-}, {
-  key: '',
-  value: '',
-  labelProps: {
-    StepIconComponent: () => <a href = 'skype:nxh0809@gmail.com?chat'>
-      <Skype color = 'primary' />
-    </a>,
-  },
-}, {
-  key: '',
-  value: '',
-  labelProps: {
-    StepIconComponent: () => (
-      <a target = '_blank' rel = 'noopener noreferrer' href = 'https://www.linkedin.com/in/harikirito/'>
-        <Linkedin color = 'primary' />
-      </a>
-    ),
-  },
-}, {
-  key: '',
-  value: '',
-  labelProps: {
-    StepIconComponent: () => <a target = '_blank' rel = 'noopener noreferrer'
-                                href = 'https://www.facebook.com/harikirito2'>
-      <Facebook color = 'primary' />
-    </a>,
   },
 }]
 
@@ -126,7 +99,7 @@ const MatProfile: ComponentType<MatProfileProps> = (props) => {
               <Step key = {v.key}>
                 <StepLabel {...v.labelProps} classes = {{
                   label: classes.labelProfile,
-                }}>{t(v.key)}: {v.value}</StepLabel>
+                }}>{t(v.key)}: {t(v.value)}</StepLabel>
               </Step>
             ))}
           </Stepper>
