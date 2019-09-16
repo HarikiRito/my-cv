@@ -1,11 +1,7 @@
-import {createServer} from 'http'
-import {parse} from 'url'
 import next from 'next'
 import express, {Request, Response} from 'express'
 import nextI18NextMiddleware from 'next-i18next/middleware'
 import nextI18next from '../src/i18n'
-import sslRedirect from 'heroku-ssl-redirect'
-import * as http from 'http'
 
 require('dotenv').config()
 
@@ -19,7 +15,6 @@ const main = async () => {
     await app.prepare()
 
     const server = express()
-    server.use(sslRedirect())
     server.use(nextI18NextMiddleware(nextI18next))
 
     server.get('/:category/:slug-:id(\\d+)', (req: Request, res: Response) => {

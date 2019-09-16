@@ -1,6 +1,7 @@
-const path        = require('path');
-const withPlugins = require('next-compose-plugins');
-const withSass    = require('@zeit/next-sass');
+const path               = require('path');
+const withPlugins        = require('next-compose-plugins');
+const withSass           = require('@zeit/next-sass');
+const withBundleAnalyzer = require('@next/bundle-analyzer');
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -20,5 +21,9 @@ module.exports = withPlugins([
       localIdentName: '[local]__[hash:base64:5]',
     },
   },
+  ], [
+    withBundleAnalyzer, {
+      enable: process.env.ANALYZE === 'true',
+    },
   ],
 ], config);
