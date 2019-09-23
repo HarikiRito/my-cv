@@ -10,7 +10,7 @@ import {
   Stepper,
   Step,
   StepLabel,
-  StepContent,
+  StepContent, Button,
 } from '@material-ui/core'
 import classNames from 'classnames'
 import {useTranslation} from 'react-i18next'
@@ -103,6 +103,11 @@ const MatProfile: ComponentType<MatProfileProps> = (props) => {
               </Step>
             ))}
           </Stepper>
+        </Box>
+        <Box m = {1} pb = {2} textAlign = 'center'>
+          <Button variant = 'contained' color = 'primary' component = 'a' href = '/static/cv.pdf'>
+            {t('common:download_cv')}
+          </Button>
         </Box>
       </Paper>
     </Fragment>

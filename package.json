@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "engines": {
-    "node": "10.15.3"
+    "node": "^10.15"
   },
   "scripts": {
     "dev": "nodemon",
@@ -13,8 +13,8 @@
     "server-start": "cross-env NODE_ENV=production pm2 start pm2.json"
   },
   "dependencies": {
-    "@material-ui/core": "^4.4.2",
-    "@material-ui/icons": "^4.4.1",
+    "@material-ui/core": "^4.4.3",
+    "@material-ui/icons": "^4.4.3",
     "@next/bundle-analyzer": "^9.0.5",
     "@zeit/next-sass": "^1.0.1",
     "classnames": "^2.2.6",
