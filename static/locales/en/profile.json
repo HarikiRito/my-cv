@@ -23,14 +23,17 @@
     },
     {
       "index": 1,
-      "title": "Backend Developer (Odoo)",
+      "title": "Python Backend Developer",
       "start": "2019-03",
       "end": null,
       "lines": [
-        "Design module for ERP system",
-        "Using Docker for linking projects"
+        "Design module for ERP system using Odoo",
+        "Design frontend using React",
+        "Wallet API system using NodeJS + Express + Typescript",
+        "Using Docker for multiple projects",
+        "VPS project setup"
       ],
-      "body": "Develop ERP system using Odoo",
+      "body": "Develop ERP system and API using NodeJS",
       "company": "FUTA Express"
     }
   ],
