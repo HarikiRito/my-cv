@@ -17,17 +17,17 @@ const programmingLanguages = [{
   key: 'Typescript',
   value: 95,
 }, {
-  key: 'Javascript',
+  key: 'Python',
   value: 85,
+}, {
+  key: 'Javascript',
+  value: 80,
 }, {
   key: 'PHP',
   value: 75,
 }, {
   key: 'SQL',
   value: 70,
-}, {
-  key: 'Python',
-  value: 75,
 }, {
   key: 'Dart',
   value: 55,
