@@ -14,9 +14,7 @@
         "Database design using MySQL.",
         "Backend design (Lumen - Laravel) base on REST architecture",
         "Initialize and setup frontend project using React + Typescript",
-        "Main UI/UX designer for website Westay.vn",
-        "Had experience in working with CI/CD using TravisCI for automate upgrade project and deploy without downtime",
-        "Had experience in AWS S3, Lambda Function for automating image compression by user"
+        "Main UI/UX designer for website Westay.vn"
       ],
       "body": "Full architecture solution for homestay system base at Westay.vn",
       "company": "VNP Group"
@@ -25,15 +23,15 @@
       "index": 1,
       "title": "Python Backend Developer",
       "start": "2019-03",
-      "end": null,
+      "end": "2020-01",
       "lines": [
-        "Design module for ERP system using Odoo",
-        "Design frontend using React",
-        "Wallet API system using NodeJS + Express + Typescript",
-        "Using Docker for multiple projects",
-        "VPS project setup"
+        "Backend ERP system using Python 3 (Odoo)",
+        "Frontend using React",
+        "Native development using Flutter and React Native",
+        "Backend wallet API using NodeJS + Express + Typescript",
+        "Using Docker for multiple projects"
       ],
-      "body": "Develop ERP system and API using NodeJS",
+      "body": "Develop ERP system and API using NodeJS, Typescript, Python 3",
       "company": "FUTA Express"
     }
   ],

@@ -1,5 +1,5 @@
-import React, {ChangeEvent, ComponentType, Fragment, useState} from 'react'
-import {compose} from 'recompose'
+import React, { ChangeEvent, ComponentType, Fragment, useState } from 'react';
+import { compose } from 'recompose';
 import {
   makeStyles,
   Theme,
@@ -13,14 +13,14 @@ import {
   NoSsr,
   Fab,
   Button,
-} from '@material-ui/core'
-import MatTabAboutMe from '@/layouts/Mat/TabItems/MatTabAboutMe'
-import MatTabResume from '@/layouts/Mat/TabItems/MatTabResume'
-import {grey} from '@material-ui/core/colors'
-import LangSwitch from '@/components/LangSwitch'
-import {useTranslation} from 'react-i18next'
-import {Add} from '@material-ui/icons'
-import {Skype, Linkedin, LinkedinBox} from 'mdi-material-ui'
+} from '@material-ui/core';
+import MatTabAboutMe from '@/layouts/Mat/TabItems/MatTabAboutMe';
+import MatTabResume from '@/layouts/Mat/TabItems/MatTabResume';
+import { grey } from '@material-ui/core/colors';
+import LangSwitch from '@/components/LangSwitch';
+import { useTranslation } from 'react-i18next';
+import { Add } from '@material-ui/icons';
+import { Skype, Linkedin, LinkedinBox } from 'mdi-material-ui';
 
 interface MatNavProps {
 
@@ -62,37 +62,37 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: '0.675rem',
     },
   }),
-)
+);
 
 const MatNav: ComponentType<MatNavProps> = (props) => {
-  const classes                 = useStyles(props)
-  const [tabIndex, setTabIndex] = useState(0)
-  const {t}                     = useTranslation(['common', 'profile'])
+  const classes                 = useStyles(props);
+  const [tabIndex, setTabIndex] = useState(0);
+  const { t }                   = useTranslation(['common', 'profile']);
 
   const handleTabChange = (event: ChangeEvent<HTMLElement>, value: number) => {
-    setTabIndex(value)
-  }
+    setTabIndex(value);
+  };
   return (
     <Fragment>
       <NoSsr>
-        <AppBar position = 'static' classes = {{
+        <AppBar position='static' classes={{
           colorPrimary: classes.appBarPrimaryColor,
         }}>
-          <Tabs value = {tabIndex} onChange = {handleTabChange} aria-label = 'simple tabs example'
-                indicatorColor = 'primary'
+          <Tabs value={tabIndex} onChange={handleTabChange} aria-label='simple tabs example'
+                indicatorColor='primary'
           >
-            <Tab href = '#intro' label = {t('common:tabs.intro')} />
-            <Tab href = '#resume' label = {t('common:tabs.resume')} />
-            <Box className = {classes.socialRoot}>
-              <a className = {classes.link} href = 'skype:nxh0809@gmail.com?chat'>
-                <Skype color = 'primary' className = {classes.icon} />
+            <Tab href='#intro' label={t('common:tabs.intro')} />
+            <Tab href='#resume' label={t('common:tabs.resume')} />
+            <Box className={classes.socialRoot}>
+              <a className={classes.link} href='skype:nxh0809@gmail.com?chat'>
+                <Skype color='primary' className={classes.icon} />
               </a>
-              <a className = {classes.link} target = '_blank' rel = 'noopener noreferrer'
-                 href = 'https://www.linkedin.com/in/harikirito/'>
-                <LinkedinBox color = 'primary' className = {classes.icon} />
+              <a className={classes.link} target='_blank' rel='noopener noreferrer'
+                 href='https://www.linkedin.com/in/harikirito/'>
+                <LinkedinBox color='primary' className={classes.icon} />
               </a>
-              <Button color = 'primary' variant = 'contained' component = 'a' href = {`mailto:${t('profile:email')}`}
-                      classes = {{
+              <Button color='primary' variant='contained' component='a' href={`mailto:${t('profile:email')}`}
+                      classes={{
                         root: classes.buttonContact,
                         label: classes.labelContact,
                       }}>
@@ -101,9 +101,9 @@ const MatNav: ComponentType<MatNavProps> = (props) => {
             </Box>
           </Tabs>
         </AppBar>
-        <Box mt = {4}>
+        <Box mt={4}>
           <Paper>
-            <Box p = {3} pt = {4}>
+            <Box p={3} pt={4}>
               {tabIndex === 0 &&
                <MatTabAboutMe />
               }
@@ -115,9 +115,9 @@ const MatNav: ComponentType<MatNavProps> = (props) => {
         </Box>
       </NoSsr>
     </Fragment>
-  )
-}
+  );
+};
 
 export default compose(
 
-)(MatNav)
+)(MatNav);
