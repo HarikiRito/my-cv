@@ -2,7 +2,6 @@ import next from 'next';
 import express, { Request, Response } from 'express';
 import nextI18NextMiddleware from 'next-i18next/middleware';
 import nextI18next from '../src/i18n';
-import { WebClient } from '@slack/web-api';
 
 const port   = parseInt(process.env.PORT || '3000', 10);
 const dev    = process.env.NODE_ENV !== 'production';
