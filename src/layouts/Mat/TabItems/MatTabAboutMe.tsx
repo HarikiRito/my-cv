@@ -38,7 +38,7 @@ const techs = [{
   value: 95,
 }, {
   key: 'Laravel',
-  value: 80,
+  value: 70,
 }, {
   key: 'VueJS',
   value: 70,
