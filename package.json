@@ -24,7 +24,7 @@
     "heroku-ssl-redirect": "^0.0.4",
     "lodash": "^4.17.15",
     "mdi-material-ui": "^6.4.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "next": "9.0.5",
     "next-compose-plugins": "^2.2.0",
     "next-i18next": "^1.2.0",
